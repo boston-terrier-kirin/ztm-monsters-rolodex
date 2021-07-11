@@ -25,22 +25,10 @@ const App = () => {
 		});
 	}, []);
 
-	useEffect(() => {
-		console.log('App.useEffect_2', searchField);
-	}, [searchField]);
-
-	useEffect(() => {
-		console.log('App.useEffect_3', searchField);
-	}, [searchField]);
-
 	const searchMonsterHandler = (event) => {
 		console.log('App.searchMonsterHandler');
 		setSearchField(event.target.value);
 		console.log('App.searchMonsterHandler', searchField, '<- old state');
-	};
-
-	const searchMonsterHandler_2 = (event) => {
-		console.log('App.searchMonsterHandler_2');
 	};
 
 	console.log('App.monsters', searchField, monsters);
@@ -54,11 +42,6 @@ const App = () => {
 			<SearchBox
 				placeholder="search monster"
 				searchMonster={searchMonsterHandler}
-			/>
-			{'　'}
-			<SearchBox
-				placeholder="dummy"
-				searchMonster={searchMonsterHandler_2}
 			/>
 			<CardList monsters={filtered} />
 		</div>
