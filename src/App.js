@@ -4,8 +4,6 @@ import { CardList } from './components/card-list/card-list';
 import { SearchBox } from './components/search-box/serch-box';
 
 const App = () => {
-	console.log('App');
-
 	const [monsters, setMonsters] = useState([]);
 	const [searchField, setSearchField] = useState('');
 
@@ -20,19 +18,19 @@ const App = () => {
 			return data;
 		};
 
-		getMonsters().then((monsters) => {
+		getMonsters().then(monsters => {
 			setMonsters(monsters);
 		});
 	}, []);
 
-	const searchMonsterHandler = (event) => {
+	const searchMonsterHandler = event => {
 		console.log('App.searchMonsterHandler');
 		setSearchField(event.target.value);
 		console.log('App.searchMonsterHandler', searchField, '<- old state');
 	};
 
 	console.log('App.monsters', searchField, monsters);
-	const filtered = monsters.filter((monster) =>
+	const filtered = monsters.filter(monster =>
 		monster.name.toLowerCase().includes(searchField)
 	);
 
