@@ -8,8 +8,6 @@ const App = () => {
 	const [searchField, setSearchField] = useState('');
 
 	useEffect(() => {
-		console.log('App.useEffect_1');
-
 		const getMonsters = async () => {
 			const response = await fetch(
 				'https://jsonplaceholder.typicode.com/users'
@@ -26,7 +24,6 @@ const App = () => {
 	const searchMonsterHandler = event => {
 		console.log('App.searchMonsterHandler');
 		setSearchField(event.target.value);
-		console.log('App.searchMonsterHandler', searchField, '<- old state');
 	};
 
 	console.log('App.monsters', searchField, monsters);
