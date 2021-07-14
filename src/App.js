@@ -22,7 +22,6 @@ const App = () => {
 	}, []);
 
 	const searchMonsterHandler = event => {
-		console.log('App.searchMonsterHandler');
 		setSearchField(event.target.value);
 	};
 
