@@ -25,7 +25,6 @@ const App = () => {
 		setSearchField(event.target.value);
 	};
 
-	console.log('App.monsters', searchField, monsters);
 	const filtered = monsters.filter(monster =>
 		monster.name.toLowerCase().includes(searchField)
 	);
