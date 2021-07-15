@@ -1,7 +1,9 @@
 import classes from './card.module.css';
 
-export const Card = (props) => {
+export const Card = props => {
 	const monster = props.monster;
+
+	console.log(props);
 
 	return (
 		<div className={classes['card-container']}>
