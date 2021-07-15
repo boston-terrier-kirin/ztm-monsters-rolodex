@@ -1,8 +1,8 @@
 import classes from './card-list.module.css';
 import { Card } from '../card/card';
 
-export const CardList = (props) => {
-	const monsterList = props.monsters.map((monster) => (
+export const CardList = ({ monsters }) => {
+	const monsterList = monsters.map(monster => (
 		<Card key={monster.id} monster={monster} />
 	));
 
