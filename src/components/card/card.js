@@ -1,7 +1,6 @@
 import classes from './card.module.css';
 
 export const Card = (props) => {
-	console.log('Card');
 	const monster = props.monster;
 
 	return (
