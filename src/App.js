@@ -4,6 +4,7 @@ import { CardList } from './components/card-list/card-list';
 import { SearchBox } from './components/search-box/serch-box';
 
 const App = () => {
+	console.log("App")
 	const [monsters, setMonsters] = useState([]);
 	const [searchField, setSearchField] = useState('');
 
