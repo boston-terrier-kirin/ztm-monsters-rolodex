@@ -1,8 +1,6 @@
 import classes from './card.module.css';
 
 export const Card = ({ monster }) => {
-	console.log(monster);
-
 	return (
 		<div className={classes['card-container']}>
 			<img
